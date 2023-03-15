@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.content {
+  background-image: url("./cesar-couto-TIvFLeqZ4ec-unsplash.jpg");
+  background-repeat: none;
+  background-size: cover;
+  height: 100%;
+}
