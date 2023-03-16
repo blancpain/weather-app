@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 6rem;
 }
 
 .title {
@@ -30,6 +30,22 @@ body {
   font-weight: 600;
   color: var(--main-font-color);
   font-family: var(--main-ff);
+}
+
+button.measure-switcher {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--main-font-color);
+  font-family: var(--main-ff);
+  padding-left: 10px;
+  padding-top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .form-wrapper {
@@ -92,8 +108,49 @@ button#search-btn {
   font-weight: 600;
 }
 
-.weather-description {
+/*LOADING ANIMATION*/
+
+.loading-container {
+  background: rgba(20, 20, 20, 0.9);
 }
 
-.feels-like {
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.loading::before {
+  content: "";
+  border: 5px solid #ccc;
+  border-top-color: #333;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 0.9s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    padding-top: 5rem;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .location-title {
+    font-size: 35px;
+  }
 }
