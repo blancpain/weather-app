@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Press+Start+2P&family=Rubik+Vinyl&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  --main-ff: "Montserrat", sans-serif;
+  --main-font-color: #fff;
 }
 
 body {
@@ -13,4 +17,83 @@ body {
   background-repeat: none;
   background-size: cover;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.title {
+  font-size: 70px;
+  padding-bottom: 3rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: var(--main-font-color);
+  font-family: var(--main-ff);
+}
+
+.form-wrapper {
+  position: relative;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#error-field {
+  padding-top: 3px;
+}
+
+input[type="text"] {
+  opacity: 50%;
+  text-align: center;
+  border: 1px solid #d6d9dc;
+  border-radius: 8px;
+  color: #1f2937;
+  padding: 3px;
+  font-size: 18px;
+  width: 350px;
+  outline: none;
+}
+
+button#search-btn {
+  font-family: "Material Icons";
+  font-size: 25px;
+  font-weight: 600;
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 2.5px;
+  padding-right: 5px;
+}
+
+.weather-container {
+  font-family: var(--main-ff);
+  color: var(--main-font-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.location-title,
+.weather-description,
+.feels-like {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.current-temp {
+  font-size: 75px;
+  font-weight: 600;
+}
+
+.weather-description {
+}
+
+.feels-like {
 }

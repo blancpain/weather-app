@@ -1,17 +1,26 @@
-import extractWeatherData from "./extractWeatherData";
+import formatWeatherData from "./extractWeatherData";
 
 const searchBtn = document.querySelector("#search-btn");
 const searchInput = document.querySelector('input[type="text"]');
-const weatherContainer = document.querySelector(".weather-container");
-const testPara = document.createElement("p");
-weatherContainer.appendChild(testPara);
+const locationTitle = document.querySelector(".location-title");
+const currentTemperature = document.querySelector(".current-temp");
+const weatherDescription = document.querySelector(".weather-description");
+const feelsLike = document.querySelector(".feels-like");
+const errorField = document.querySelector("#error-field");
 
 export default async function displayWeatherData(location) {
   try {
-    const weatherData = await extractWeatherData(location);
-    testPara.textContent = weatherData.country;
+    const weatherData = await formatWeatherData(location);
+    errorField.textContent = "";
+    locationTitle.textContent = weatherData.fullLocation;
+    currentTemperature.textContent = `${weatherData.currentTemperature}°`;
+    weatherDescription.textContent = weatherData.weatherDescription;
+    feelsLike.textContent = `Feels like ${weatherData.temperatureFeelsLike}°`;
   } catch (err) {
-    testPara.textContent = "poop";
+    errorField.textContent =
+      err.message === "Location not found."
+        ? err.message
+        : "Failed to connect to weather service.";
   }
 }
 

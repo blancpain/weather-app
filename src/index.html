@@ -5,19 +5,27 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <title>Weather</title>
 </head>
 
 <body>
   <div class="content">
+    <div class="title">Weather Today</div>
     <div class="form-wrapper">
       <form>
         <label for="search"></label>
         <input type="text" name="search" id="search" placeholder="Enter city name" />
-        <button type="submit" id="search-btn">Search</button>
+        <button type="submit" id="search-btn">search</button>
       </form>
+      <span id="error-field"></span>
     </div>
-    <div class="weather-container"></div>
+    <div class="weather-container">
+      <div class="location-title"></div>
+      <div class="current-temp"></div>
+      <div class="weather-description"></div>
+      <div class="feels-like"></div>
+    </div>
   </div>
 </body>
 
