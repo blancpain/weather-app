@@ -5,9 +5,41 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Template</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <title>Weather</title>
 <script defer src="main.js"></script></head>
 
-<body></body>
+<body>
+  <button class="measure-switcher" type="button">C°</button>
+  <div class="loading-container"></div>
+  <div class="content">
+    <div class="title">Weather Today</div>
+    <div class="form-wrapper">
+      <form>
+        <label for="search"></label>
+        <input type="text" name="search" id="search" placeholder="Enter city name" />
+        <button type="submit" id="search-btn">search</button>
+      </form>
+      <span id="error-field"></span>
+    </div>
+    <div class="weather-container">
+      <div class="location-title"></div>
+      <div class="current-temp"></div>
+      <div class="weather-description"></div>
+      <div class="feels-like">
+        <span class="text">Feels like</span>
+        <span class="feels-like-temp"></span>
+      </div>
+    </div>
+    <div class="footer">
+      Photo by
+      <a href="https://unsplash.com/@xcrap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">César
+        Couto</a>
+      on
+      <a
+        href="https://unsplash.com/photos/TIvFLeqZ4ec?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </div>
+  </div>
+</body>
 
 </html>
